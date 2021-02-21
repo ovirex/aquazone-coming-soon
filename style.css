@@ -31,7 +31,7 @@ img {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    width: 60%;
+    max-width: 808px;
 }
 
 .logo {
@@ -39,20 +39,23 @@ img {
     max-width: 300px;
 }
 
-.ig-btn {
-    border: 2px solid white;
-    margin: 0 auto;
-    padding: 16px 20px;
-    color: white;
+.btn-container {
+    width: 100%;
+
     margin-top: 2em;
-    transition-property: background-color, color;
-    transition-duration: 500ms;
-    transition-timing-function: ease-out;
+    display: flex;
+    justify-content: center;
 }
 
-.ig-btn:hover {
-    background-color: white;
-    color: #025092;
+.ig-btn {
+    transition-property: color;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    position: relative;
+    overflow: hidden;
+    padding: 16px 20px;
+    color: white;
+    border: 2px solid white;
 }
 
 .ig-btn i {
@@ -64,6 +67,7 @@ img {
 .img-wrapper {
     position: relative;
     height: fit-content;
+    padding: 0 1em;
 }
 .img-wrapper h1 {
     color: white;
@@ -79,5 +83,42 @@ img {
 
 .img-wrapper img[alt="buzo"] {
     margin: 0 auto;
-    margin-top: -50px;
+    margin-top: -32px;
+}
+
+/*********BTN ANIMATION************/
+.wave {
+    opacity: 1;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    background: white;
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-bottom: -301px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    z-index: -1;
+    transition-duration: 0.75s;
+    transition-property: margin-bottom;
+    transition-timing-function: ease-in-out;
+}
+
+.ig-btn:hover .wave {
+    margin-bottom: -200px;
+    animation: rotate 2000ms infinite linear;
+}
+
+.ig-btn:hover {
+    color: #025092;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
 }
