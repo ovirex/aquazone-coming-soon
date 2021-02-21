@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Lemon-Milk-Bold";
+    src: url("assets/fuentes/lemon-milk/LEMONMILK-Bold.otf") format("truetype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: url("./assets/img/Diving-Aquazone.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: Lemon-Milk-Bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 60%;
+}
+
+.logo {
+    margin: 2em auto;
+    max-width: 300px;
+}
+
+.ig-btn {
+    border: 2px solid white;
+    margin: 0 auto;
+    padding: 16px 20px;
+    color: white;
+    margin-top: 2em;
+    transition-property: background-color, color;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+}
+
+.ig-btn:hover {
+    background-color: white;
+    color: #025092;
+}
+
+.ig-btn i {
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.img-wrapper {
+    position: relative;
+    height: fit-content;
+}
+.img-wrapper h1 {
+    color: white;
+    font-size: 5vmax;
+    text-align: center;
+    line-height: 1;
+}
+
+.img-wrapper img {
+    position: absolute;
+    margin: 0 auto;
+}
+
+.img-wrapper img[alt="buzo"] {
+    margin: 0 auto;
+    margin-top: -50px;
+}
