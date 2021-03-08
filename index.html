@@ -36,12 +36,32 @@
                 >
             </div>
         </div>
-        <script
+
+        <!-- <script
             src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.8/pixi.min.js"
             integrity="sha512-+3VRC7Y/UL8l0qrTsBnFxSoLD/xHrEgyPP/l1TezDHfUs62FqVz1Y3iWVXFsxw7urM+rXMJjf7ga2NN+eDDRKQ=="
             crossorigin="anonymous"
+        ></script> -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.js"
+            integrity="sha512-XP0Zkb/BUP7JXgvQni/hzWpDDTWYOru3jkukD1ZLcpMd8/uCkNQRxZccBuvMAVN2bDVMrQNoMSyQcevVPoXCBg=="
+            crossorigin="anonymous"
         ></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script src="./dependencies/LiquidDistortion/js/main.js"></script>
         <script src="./index.js"></script>
+        <script>
+            var spriteImagesSrc = ["./assets/img/Diving-Aquazone.jpg"];
+
+            var initCanvasSlideshow = new CanvasSlideshow({
+                sprites: spriteImagesSrc,
+                displacementImage:
+                    "./dependencies/LiquidDistortion/img/dmaps/2048x2048/clouds.jpg",
+                autoPlay: true,
+                autoPlaySpeed: [10, 3],
+                displaceScale: [200, 70],
+            });
+        </script>
     </body>
 </html>
